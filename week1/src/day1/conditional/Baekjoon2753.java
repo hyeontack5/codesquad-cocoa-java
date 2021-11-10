@@ -1,15 +1,18 @@
 package day1.conditional;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
-public class _2753_Baekjoon {
-    public static void main(String[] args) {
+public class Baekjoon2753 {
+    public static void main(String[] args) throws Exception {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int year = sc.nextInt();
+        int year = Integer.parseInt(br.readLine());
 
-        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+        br.close();
+
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
             System.out.println(1);
         } else {
             System.out.println(0);
